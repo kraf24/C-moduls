@@ -3,9 +3,9 @@ OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= clang++
 RM				= rm -f
-CXXFLAGS		= -Wall -Wextra -Werror -I.
+CXXFLAGS		= -I. #-Wall -Wextra -Werror -I.
 
-NAME			= PHONE
+NAME			= Account
 
 all:	$(NAME)
 

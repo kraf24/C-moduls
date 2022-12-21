@@ -10,6 +10,7 @@ Zombie::Zombie(std::string name)
 
 std::string RandName()
 {
+	srand(time(NULL));
 	std::string NameList[5] = 
 	{
 		"Bob",

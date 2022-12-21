@@ -9,25 +9,40 @@ Harl::~Harl()
 void Harl::complain(std::string level)
 {
 
-	void (Harl::*complaint[])(void) = {
+	void (Harl::*complaint[4])(void) = {
 		&Harl::debug,
 		&Harl::info,
 		&Harl::warning,
 		&Harl::error
 	};
 
-	std::string levels[] = {
+	std::string levels[4] = {
 		"DEBUG", "INFO",
 		"WARNING", "ERROR"
 	};
 
 	for (int i = 0; i < 4; i++)
+	{
 		if (levels[i] == level)
 		{
-			while(i < 4)
-				(this->*complaint[i++])();
-			return;
+			switch (i)
+			{
+				case 0:
+					while (i < 4)
+						(this->*complaint[i++])();
+				case 1:
+					while (i < 4)
+						(this->*complaint[i++])();
+				case 2:
+					while (i < 4)
+						(this->*complaint[i++])();
+				case 3:
+					while (i < 4)
+						(this->*complaint[i++])();
+			}
+			return ;
 		}
+	}
 	wrongInput();
 }
 

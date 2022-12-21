@@ -11,7 +11,7 @@ void NewFile::getInfo(char **argv)
 	for(int i = 1; i < 4; i++)
 	{
 		fileInfo[i - 1] = argv[i];
-		if(fileInfo[i-1].empty())
+		if (fileInfo[i - 1].empty())
 			throw (__error);
 	}
 }
@@ -19,7 +19,7 @@ void NewFile::getInfo(char **argv)
 void NewFile::openFile(void)
 {
 	std::string newstr;
-	int leanth = this->fileInfo[1].length();
+	int length = this->fileInfo[1].length();
 
 	my_file.open(this->fileInfo[0]);
 	if (!my_file)
@@ -27,9 +27,9 @@ void NewFile::openFile(void)
 	newstr.assign(std::istreambuf_iterator<char>(this->my_file), std::istreambuf_iterator<char>());
 	for(size_t size = 0; size < newstr.length(); size++)
 	{
-		if(!(newstr.compare(size, leanth, fileInfo[1])))
+		if(!(newstr.compare(size, length, fileInfo[1])))
 		{
-			newstr.erase(size, leanth);
+			newstr.erase(size, length);
 			newstr.insert(size, fileInfo[2]);
 		}
 	}

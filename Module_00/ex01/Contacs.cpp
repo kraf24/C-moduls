@@ -6,7 +6,7 @@
 /*   By: gpinchuk <gpinchuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 14:57:18 by gpinchuk          #+#    #+#             */
-/*   Updated: 2022/08/29 19:37:52 by gpinchuk         ###   ########.fr       */
+/*   Updated: 2022/12/18 17:09:54 by gpinchuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void Contact::Display(int index)
 		
 	std::cout << "|" << std::setw(10) << index;
 	
-	for (int x = 1; x < 4; x++)
+	for (int x = 0; x < 3; x++)
 	{
 
 		if(this->data[x].length() > 10)
