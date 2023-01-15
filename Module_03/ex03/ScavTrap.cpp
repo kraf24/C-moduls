@@ -47,7 +47,7 @@ void ScavTrap::attack(const std::string &target)
 {
 	if (this->EnrPoints > 0 && this->HitPoints > 0)
 	{
-		std::cout << "ScabTrap " << this->Name << " attacks " << target << std::ends;
+		std::cout << "ScavTrap " << this->Name << " attacks " << target << std::ends;
 		std::cout <<  ", causing " << this->AtkPoints << " points of damage!" << std::endl;
 		this->EnrPoints--;
 	}

@@ -1,4 +1,4 @@
-#include"ClapTarp.hpp"
+#include"ClapTrap.hpp"
 
 ClapTrap::ClapTrap(): Name("Ostin"),HitPoints(10), EnrPoints(10), AtkPoints(5) 
 {
