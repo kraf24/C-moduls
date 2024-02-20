@@ -4,8 +4,9 @@ void times_two(int &n) {
     std::cout << n * 2 << std::endl;
 }
 
-void print(std::string &s) {
+int print(std::string &s) {
     std::cout << s << std::endl;
+    return 1;
 }
 
 int main(void) {

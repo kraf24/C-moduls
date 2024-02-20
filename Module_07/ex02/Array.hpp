@@ -3,7 +3,7 @@
 #include"exception"
 #include <iostream>
 
-template <typename T>
+template <class T>
 class Array
 {
 	public:
